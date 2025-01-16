@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/mugish.beldar/static/css/main.2e7920a4.css",
+    "main.js": "/mugish.beldar/static/js/main.dcfcc8b2.js",
+    "static/media/breeze_weather_project_image.png": "/mugish.beldar/static/media/breeze_weather_project_image.807f531aaa198d26d3a7.png",
+    "static/media/zentalk-pc-search-drop-down-page.png": "/mugish.beldar/static/media/zentalk-pc-search-drop-down-page.a9d5d4119a6c5789b8ef.png",
+    "static/media/zentalk-pc-initial-starting-page.png": "/mugish.beldar/static/media/zentalk-pc-initial-starting-page.e2466b6d8bc17fac212e.png",
+    "static/media/CSS3_logo_and_wordmark.svg.png": "/mugish.beldar/static/media/CSS3_logo_and_wordmark.svg.31d6eb9e1504961bf8a9.png",
+    "static/media/Visual_Studio_Code_1.35_icon.svg.png": "/mugish.beldar/static/media/Visual_Studio_Code_1.35_icon.svg.691f776a11a21a483030.png",
+    "static/media/email_client_project.png": "/mugish.beldar/static/media/email_client_project.6fd22252db82388b0f46.png",
+    "static/media/bootstrap-logo-shadow.png": "/mugish.beldar/static/media/bootstrap-logo-shadow.9cd429090069a189475b.png",
+    "static/media/zentalk-pc-signup-page.png": "/mugish.beldar/static/media/zentalk-pc-signup-page.4c9cb0f5750f7caf1f46.png",
+    "static/media/zentalk-mobile-context-menu.png": "/mugish.beldar/static/media/zentalk-mobile-context-menu.344ca06be1d12b8d2a73.png",
+    "static/media/zentalk-mobile-chat-area-screen.png": "/mugish.beldar/static/media/zentalk-mobile-chat-area-screen.75c9389f13491c4889c3.png",
+    "static/media/zentalk-mobile-chat-screen.png": "/mugish.beldar/static/media/zentalk-mobile-chat-screen.b45be2c49dd877771e61.png",
+    "static/media/zentalk-pc-setting-page.png": "/mugish.beldar/static/media/zentalk-pc-setting-page.0940eada897d5495acc4.png",
+    "static/media/zentalk-pc-login.png": "/mugish.beldar/static/media/zentalk-pc-login.4f80e8696cee112f604e.png",
+    "static/media/zentalk-mobile-signup.png": "/mugish.beldar/static/media/zentalk-mobile-signup.fa06c56410c3be881e09.png",
+    "static/media/JavaScript-logo.png": "/mugish.beldar/static/media/JavaScript-logo.062825dbceed44567e91.png",
+    "static/media/zentalk-mobile-setting.png": "/mugish.beldar/static/media/zentalk-mobile-setting.a547a0255139f338d2b4.png",
+    "static/media/zentalk-mobile-login.png": "/mugish.beldar/static/media/zentalk-mobile-login.c385090c74bbe12dd9f9.png",
+    "static/media/mongodb-original-wordmark.svg": "/mugish.beldar/static/media/mongodb-original-wordmark.37c254895b58a4072247e428fc867bbe.svg",
+    "static/media/nodejsLight.svg": "/mugish.beldar/static/media/nodejsLight.bd8ae586b9726f8db2651dc7d2e521bd.svg",
+    "static/media/mysql-original-wordmark.svg": "/mugish.beldar/static/media/mysql-original-wordmark.6394bc2572c13c00cc6e48bb91629ab3.svg",
+    "index.html": "/mugish.beldar/index.html",
+    "static/media/reactjs.svg": "/mugish.beldar/static/media/reactjs.928f956d9c8ebcffb98a8e917154a81a.svg",
+    "main.2e7920a4.css.map": "/mugish.beldar/static/css/main.2e7920a4.css.map",
+    "main.dcfcc8b2.js.map": "/mugish.beldar/static/js/main.dcfcc8b2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2e7920a4.css",
+    "static/js/main.dcfcc8b2.js"
+  ]
+}
