@@ -1,0 +1,48 @@
+@import 'pixel-retroui/dist/index.css';
+/* @import 'pixel-retroui/dist/fonts.css'; */
+@import "tailwindcss";
+
+/* @utility container {
+  padding-inline: 10px;
+  margin-inline: auto;
+  
+  @variant sm {
+    padding-inline: 20px;
+  }
+  
+  @variant lg {
+    padding-inline: 20px;
+  }
+  
+  @variant xl {
+    padding-inline: 40px;
+  }
+} */
+
+@theme {
+  --color-white: #fff;
+  --color-black: #000;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+body {
+  background-color: var(--color-white);
+  font-family: "Nova Square", sans-serif;
+}
+
+.nova-square {
+  font-family: "Nova Square", sans-serif;
+}
+
+.bg-glassy-light {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px) saturate(200%);
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+
+.bg-glassy-dark {
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(16px) saturate(150%);
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
