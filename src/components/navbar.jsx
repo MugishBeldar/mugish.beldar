@@ -1,9 +1,8 @@
 import themePresets from '../theme';
-import { Button } from 'pixel-retroui';
+import { Button, Card } from 'pixel-retroui';
 import React, { useState } from 'react';
 import { cn, getColorCode } from '../lib/util';
 import { ThemeContext } from '../context/theme';
-import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
 
 const getButton = (title, theme) => {
   return (
@@ -13,7 +12,6 @@ const getButton = (title, theme) => {
       textColor={getColorCode(themePresets[theme].textColor)}
       borderColor={getColorCode(themePresets[theme].borderColor)}
       shadow={getColorCode(themePresets[theme].shadow)}
-    // className=
     >
       {title}
     </Button>
@@ -58,16 +56,16 @@ const Navbar = () => {
 
           {/* Theme Toggle */}
           <div onClick={toggleTheme} className="hidden lg:flex lg:items-center cursor-pointer text-2xl">
-            {theme === 'light' ? <i i className="hn hn-moon-solid" ></i> : <i class="hn hn-sun-solid"></i>}
+            {theme === 'light' ? < i className="hn hn-moon-solid" /> : <i className="hn hn-sun-solid" />}
           </div>
 
           {/* Mobile Hamburger Menu */}
           <div className="flex items-center gap-5 lg:hidden cursor-pointer text-2xl">
             <div onClick={toggleTheme} className="lg:hidden cursor-pointer text-2xl flex items-center">
-              {theme === 'light' ? <i i className="hn hn-moon-solid lg:hidden" ></i> : <i class="hn hn-sun-solid lg:hidden"></i>}
+              {theme === 'light' ? < i className="hn hn-moon-solid lg:hidden" /> : <i className="hn hn-sun-solid lg:hidden" />}
             </div>
             <div onClick={() => setIsOpen(!isOpen)} className="flex items-center lg:hidden ">
-              {isOpen ? <i class="hn hn-times-circle-solid lg:hidden"></i> : <i class="hn hn-bars-solid lg:hidden"></i>}
+              {isOpen ? <i className="hn hn-times-circle-solid lg:hidden" /> : <i className="hn hn-bars-solid lg:hidden" />}
             </div>
           </div>
         </div>

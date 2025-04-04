@@ -1,10 +1,10 @@
 import React from 'react'
 import themePresets from '../theme'
-
+import { Button } from 'pixel-retroui';
 import { ThemeContext } from '../context/theme';
 import { Bio } from '../data/constant'
 import { Typewriter } from 'react-simple-typewriter';
-import { cn } from '../lib/util'
+import { cn, getColorCode } from '../lib/util'
 const Hero = () => {
   const context = React.useContext(ThemeContext);
   if (!context) {
@@ -35,9 +35,19 @@ const Hero = () => {
             </span>
           </div>
         </div>
-
         <div className={cn('text-justify')}>{Bio.description}</div>
-        {/* <ResumeButton style={{ color: `${theme === 'darkTheme' ? darkTheme.color : lightTheme.color}` }} href='https://drive.google.com/file/d/11XUZ5J4bOR-u-v5qaqQJIghnz1070yOi/view?usp=sharing' target='_blank'>View & Download Resume</ResumeButton> */}
+        <div className='font-bold ml-[-10px] mt-4 flex justify-center'>
+          <Button
+            onClick={() => { console.log('open drive link to view and download resume') }}
+            bg={getColorCode(themePresets[theme].bg)}
+            textColor={getColorCode(themePresets[theme].textColor)}
+            borderColor={getColorCode(themePresets[theme].borderColor)}
+            shadow={getColorCode(themePresets[theme].shadow)}
+            className={cn(`nova-square`)}
+          >
+            View & Download Resume
+          </Button>
+        </div>
       </div >
     </div >
   )

@@ -1,24 +1,8 @@
 @import 'pixel-retroui/dist/index.css';
 /* @import 'pixel-retroui/dist/fonts.css'; */
 @import '@hackernoon/pixel-icon-library/fonts/iconfont.css';
+@import "../node_modules/nes.css/css/nes.css";
 @import "tailwindcss";
-
-/* @utility container {
-  padding-inline: 10px;
-  margin-inline: auto;
-  
-  @variant sm {
-    padding-inline: 20px;
-  }
-  
-  @variant lg {
-    padding-inline: 20px;
-  }
-  
-  @variant xl {
-    padding-inline: 40px;
-  }
-} */
 
 @theme {
   --color-white: #fff;
