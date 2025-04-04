@@ -21,7 +21,7 @@ export default {
     textColor: 'text-[#D2D2D2]', // white
     borderColor: 'border-[#D2D2D2]', // white
     shadow: 'shadow-[#D2D2D2]', // white
-    containerBg: 'bg-glassy-dark',
+    containerBg: 'bg-glassy-light',
     vantaAnimationObj: {
       mouseControls: true,
       touchControls: true,

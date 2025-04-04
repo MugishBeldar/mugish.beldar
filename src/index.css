@@ -1,5 +1,6 @@
 @import 'pixel-retroui/dist/index.css';
 /* @import 'pixel-retroui/dist/fonts.css'; */
+@import '@hackernoon/pixel-icon-library/fonts/iconfont.css';
 @import "tailwindcss";
 
 /* @utility container {

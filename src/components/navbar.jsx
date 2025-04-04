@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Button } from 'pixel-retroui';
-import { ThemeContext } from '../context/theme';
 import themePresets from '../theme';
-import { FaLaptopCode, FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
+import { Button } from 'pixel-retroui';
+import React, { useState } from 'react';
 import { cn, getColorCode } from '../lib/util';
+import { ThemeContext } from '../context/theme';
+import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
 
 const getButton = (title, theme) => {
   return (
@@ -13,7 +13,7 @@ const getButton = (title, theme) => {
       textColor={getColorCode(themePresets[theme].textColor)}
       borderColor={getColorCode(themePresets[theme].borderColor)}
       shadow={getColorCode(themePresets[theme].shadow)}
-      // className=
+    // className=
     >
       {title}
     </Button>
@@ -34,9 +34,9 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center gap-10">
-          <div className={cn('flex items-center gap-5 text-2xl cursor-pointer')}>
+          <div className={cn('flex items-center gap-5 text-2xl cursor-pointer w-[40px]')}>
             <div className={cn(themePresets[theme].textColor)}>
-              <FaLaptopCode />
+              {theme === 'light' ? <img src={'/assets/mstile-70x70-dark.png'} alt='user_logo' /> : <img src={'/assets/mstile-70x70-light.png'} alt='user_logo' />}
             </div>
           </div>
 
@@ -57,17 +57,17 @@ const Navbar = () => {
           </div>
 
           {/* Theme Toggle */}
-          <div onClick={toggleTheme} className="hidden lg:block cursor-pointer text-2xl">
-            {theme === 'light' ? <FaMoon /> : <FaSun />}
+          <div onClick={toggleTheme} className="hidden lg:flex lg:items-center cursor-pointer text-2xl">
+            {theme === 'light' ? <i i className="hn hn-moon-solid" ></i> : <i class="hn hn-sun-solid"></i>}
           </div>
 
           {/* Mobile Hamburger Menu */}
           <div className="flex items-center gap-5 lg:hidden cursor-pointer text-2xl">
-            <div onClick={toggleTheme} className="lg:hidden cursor-pointer text-2xl">
-              {theme === 'light' ? <FaMoon /> : <FaSun />}
+            <div onClick={toggleTheme} className="lg:hidden cursor-pointer text-2xl flex items-center">
+              {theme === 'light' ? <i i className="hn hn-moon-solid lg:hidden" ></i> : <i class="hn hn-sun-solid lg:hidden"></i>}
             </div>
-            <div onClick={() => setIsOpen(!isOpen)} className="lg:hidden">
-              {isOpen ? <FaTimes /> : <FaBars />}
+            <div onClick={() => setIsOpen(!isOpen)} className="flex items-center lg:hidden ">
+              {isOpen ? <i class="hn hn-times-circle-solid lg:hidden"></i> : <i class="hn hn-bars-solid lg:hidden"></i>}
             </div>
           </div>
         </div>
