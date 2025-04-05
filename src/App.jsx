@@ -1,5 +1,5 @@
 import React, { use, useEffect, useRef, useState } from 'react'
-import { Hero, Navbar, Skills } from './components'
+import { Experience, Hero, Navbar, Skills } from './components'
 import FOG from "vanta/dist/vanta.fog.min.js";
 import * as THREE from "three";
 import { ThemeContext } from './context/theme';
@@ -42,8 +42,11 @@ function App() {
           <div className={cn('p-4', themePresets[theme].containerBg)}>
             <Hero />
           </div>
-          <div className={cn('p-4', )}>
-            <Skills/>
+          <div className={cn('p-4',)}>
+            <Skills />
+          </div>
+          <div className={cn('p-4')}>
+            <Experience />
           </div>
         </div>
       </div>
