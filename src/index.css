@@ -14,6 +14,7 @@
 body {
   background-color: var(--color-white);
   font-family: "Nova Square", sans-serif;
+  cursor: default;
 }
 
 .nova-square {
@@ -30,4 +31,9 @@ body {
   background-color: rgba(0, 0, 0, 0);
   backdrop-filter: blur(16px) saturate(150%);
   /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+
+/* nes css custome classes  */
+.custom-border {
+  border-color: red !important;
 }

@@ -39,7 +39,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center gap-6 text-lg">
+          <div className="hidden lg:flex items-center gap-6 text-lg mt-[14px]">
             {['About', 'Skills', 'Experience', 'Projects', 'Education', 'Contact'].map((item) => (
               <p key={item} className={cn("cursor-pointer transition", themePresets[theme].textColor)}>
                 {item}

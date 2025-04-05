@@ -27,12 +27,7 @@ const Skills = () => {
               <h2 className={cn('text-[28px] font-semibold text-secondary mb-5 text-center', themePresets[theme].textColor)}>{skill.title}</h2>
               <div className='flex justify-center flex-wrap gap-3'>
                 {skill.skills.map((item, index) => (
-                  // <div className={cn(`  `, themePresets[theme].textColor, theme === 'light' ? 'border border-red-' : 'border border-[#D2D2D2]')} key={index}>
-                  //   {/* <SkillImage src={item.image} /> */}
-                  //   <a href={'#'} target=''>
-                  //     {item.name}</a>
-                  // </div>
-                  <div className={cn('nes-container is-rounded')} style={{padding:'2px'}} key={index}>
+                  <div className={cn('nes-container is-rounded', theme === 'dark' ? 'is-dark' : '')} style={{ padding: theme === 'light' ? '2px' : '10px', margin: theme === 'dark' ? '1px' : '9px' }} key={index}>
                     <p>{item.name}</p>
                   </div>
                 ))}
