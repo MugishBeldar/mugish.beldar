@@ -1,6 +1,5 @@
 import React, { createContext, useState} from 'react';
 
-// Create the context with default values
 const ThemeContext = createContext(null);
 
 const ThemeProvider = ({ children }) => {

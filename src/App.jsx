@@ -5,7 +5,6 @@ import * as THREE from "three";
 import { ThemeContext } from './context/theme';
 import themePresets from './theme'
 import { cn } from './lib/util';
-// import { Card } from 'pixel-retroui';
 
 function App() {
   const vantaRef = useRef(null);
@@ -28,15 +27,9 @@ function App() {
     <section ref={vantaRef} className="w-full min-h-screen">
       <div className="relative">
         <div className={cn(`fixed top-0 left-0 z-10 w-full`, themePresets[theme].containerBg)}>
-          {/* <Card
-            textColor={getColorCode(themePresets[theme].textColor)}
-            borderColor={getColorCode(themePresets[theme].borderColor)}
-            shadowColor={getColorCode(themePresets[theme].shadowColor)}
-            > */}
           <div className="container mx-auto px-4 lg:px-0 w-full py-4">
             <Navbar />
           </div>
-          {/* </Card> */}
         </div>
         <div className={cn('container mx-auto w-full px-4 lg:px-0 pt-[100px] lg:pt-[120px]', themePresets[theme].textColor)}>
           <div className={cn('p-4', themePresets[theme].containerBg)}>

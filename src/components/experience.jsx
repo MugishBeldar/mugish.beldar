@@ -1,9 +1,7 @@
 import React from 'react'
-import { cn, getColorCode } from '../lib/util'
+import { cn } from '../lib/util'
 import { ThemeContext } from '../context/theme';
 import themePresets from '../theme'
-import { skills } from '../data/constant'
-import { Card } from 'pixel-retroui';
 
 const Experience = () => {
   const context = React.useContext(ThemeContext);
