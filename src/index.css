@@ -1,5 +1,3 @@
-@import 'pixel-retroui/dist/index.css';
-/* @import 'pixel-retroui/dist/fonts.css'; */
 @import '@hackernoon/pixel-icon-library/fonts/iconfont.css';
 @import "../node_modules/nes.css/css/nes.css";
 @import "tailwindcss";
@@ -11,18 +9,26 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-body {
-  background-color: var(--color-white);
+html,
+body,
+pre,
+code,
+kbd,
+samp {
   font-family: "Nova Square", sans-serif;
   cursor: default;
 }
 
-.nova-square {
-  font-family: "Nova Square", sans-serif;
+body {
+  background-color: var(--color-white);
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .bg-glassy-light {
-  background: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(16px) saturate(200%);
   /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
 }
@@ -34,6 +40,7 @@ body {
 }
 
 /* nes css custome classes  */
-.custom-border {
-  border-color: red !important;
+/* Custom dark mode overrides */
+.dark.nes-btn {
+  border-image-source: url("data:image/svg+xml;utf8,\<?xml version='1.0' encoding='UTF-8' ?>\<svg version='1.1' width='5' height='5' xmlns='http://www.w3.org/2000/svg'>\<path d='M2 1 h1 v1 h-1 z M1 2 h1 v1 h-1 z M3 2 h1 v1 h-1 z M2 3 h1 v1 h-1 z' fill='white' />\</svg>") !important;
 }

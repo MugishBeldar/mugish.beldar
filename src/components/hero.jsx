@@ -1,6 +1,5 @@
 import React from 'react'
 import themePresets from '../theme'
-import { Button } from 'pixel-retroui';
 import { ThemeContext } from '../context/theme';
 import { Bio } from '../data/constant'
 import { Typewriter } from 'react-simple-typewriter';
@@ -36,17 +35,17 @@ const Hero = () => {
           </div>
         </div>
         <div className={cn('text-justify')}>{Bio.description}</div>
-        <div className='font-bold ml-[-10px] mt-4 flex justify-center'>
-          <Button
-            onClick={() => { console.log('open drive link to view and download resume') }}
-            bg={getColorCode(themePresets[theme].bg)}
-            textColor={getColorCode(themePresets[theme].textColor)}
-            borderColor={getColorCode(themePresets[theme].borderColor)}
-            shadow={getColorCode(themePresets[theme].shadow)}
-            className={cn(`nova-square`)}
+        <div className="mt-3 grid place-items-center">
+          <button
+            onClick={() => console.log('redirect to github')}
+            className={cn("nes-btn font-bold", theme === 'dark' ? 'dark' : '')}
+            style={{
+              backgroundColor: getColorCode(themePresets[theme].bg),
+              color: getColorCode(themePresets[theme].textColor),
+            }}
           >
             View & Download Resume
-          </Button>
+          </button>
         </div>
       </div >
     </div >

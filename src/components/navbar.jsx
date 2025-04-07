@@ -1,20 +1,17 @@
 import themePresets from '../theme';
-import { Button, Card } from 'pixel-retroui';
 import React, { useState } from 'react';
 import { cn, getColorCode } from '../lib/util';
 import { ThemeContext } from '../context/theme';
 
 const getButton = (title, theme) => {
   return (
-    <Button
+    <button
       onClick={() => { console.log('redirect to github') }}
-      bg={getColorCode(themePresets[theme].bg)}
-      textColor={getColorCode(themePresets[theme].textColor)}
-      borderColor={getColorCode(themePresets[theme].borderColor)}
-      shadow={getColorCode(themePresets[theme].shadow)}
+      className={cn("nes-btn", theme === 'dark' ? 'dark' : '')}
+      style={{ backgroundColor: getColorCode(themePresets[theme].bg), color: getColorCode(themePresets[theme].textColor) }}
     >
       {title}
-    </Button>
+    </button>
   )
 }
 
@@ -28,7 +25,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={cn('shadow-md font-bold', themePresets[theme].textColor)}
+      className={cn('font-bold', themePresets[theme].textColor)}
     >
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center gap-10">
@@ -77,7 +74,7 @@ const Navbar = () => {
           {['About', 'Skills', 'Experience', 'Projects', 'Education', 'Contact'].map((item) => (
             <p key={item} className={cn(`cursor-pointer flex items-center py-2 px-1`, theme === 'light' ? `hover:bg-[#24242B] hover:text-[#D2D2D2]` : `hover:bg-[#D2D2D2] hover:text-[#24242B]`)}>{item}</p>
           ))}
-          <div className="font-bold ml-[-10px]">
+          <div className="font-bold">
             {getButton('Github Profile', theme)}
           </div>
         </div>
