@@ -1,8 +1,8 @@
 import React from 'react'
-import { cn, getColorCode } from '../lib/util'
-import { ThemeContext } from '../context/theme';
 import themePresets from '../theme'
 import { skills } from '../data/constant'
+import { cn, getColorCode } from '../lib/util'
+import { ThemeContext } from '../context/theme';
 
 const Skills = () => {
   const context = React.useContext(ThemeContext);

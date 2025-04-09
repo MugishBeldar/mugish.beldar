@@ -1,6 +1,6 @@
-@import '@hackernoon/pixel-icon-library/fonts/iconfont.css';
-@import "../node_modules/nes.css/css/nes.css";
 @import "tailwindcss";
+@import "../node_modules/nes.css/css/nes.css";
+@import '@hackernoon/pixel-icon-library/fonts/iconfont.css';
 
 @theme {
   --color-white: #fff;

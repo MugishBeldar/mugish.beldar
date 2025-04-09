@@ -1,9 +1,10 @@
 import React from 'react'
 import themePresets from '../theme'
-import { ThemeContext } from '../context/theme';
 import { Bio } from '../data/constant'
-import { Typewriter } from 'react-simple-typewriter';
 import { cn, getColorCode } from '../lib/util'
+import { ThemeContext } from '../context/theme';
+import { Typewriter } from 'react-simple-typewriter';
+
 const Hero = () => {
   const context = React.useContext(ThemeContext);
   if (!context) {

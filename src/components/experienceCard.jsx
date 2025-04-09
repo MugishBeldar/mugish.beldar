@@ -1,7 +1,7 @@
-import { useContext } from 'react';
-import { ThemeContext } from '../context/theme';
 import { cn } from '../lib/util';
+import { useContext } from 'react';
 import themePresets from '../theme';
+import { ThemeContext } from '../context/theme';
 
 const ExperienceCard = ({ experience }) => {
   const { theme } = useContext(ThemeContext);

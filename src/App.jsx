@@ -1,10 +1,10 @@
+import * as THREE from "three";
+import { cn } from './lib/util';
+import themePresets from './theme'
+import FOG from "vanta/dist/vanta.fog.min.js";
+import { ThemeContext } from './context/theme';
 import React, { use, useEffect, useRef, useState } from 'react'
 import { Experience, Hero, Navbar, Skills } from './components'
-import FOG from "vanta/dist/vanta.fog.min.js";
-import * as THREE from "three";
-import { ThemeContext } from './context/theme';
-import themePresets from './theme'
-import { cn } from './lib/util';
 
 function App() {
   const vantaRef = useRef(null);

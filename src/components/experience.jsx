@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from '../lib/util';
-import { ThemeContext } from '../context/theme';
 import themePresets from '../theme';
+import { ThemeContext } from '../context/theme';
 import { experiences } from '../data/constant.js';
 import ExperienceCard from './experienceCard.jsx';
 
