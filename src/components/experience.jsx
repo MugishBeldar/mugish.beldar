@@ -1,42 +1,61 @@
-import React from 'react'
-import { cn } from '../lib/util'
+import React from 'react';
+import { cn } from '../lib/util';
 import { ThemeContext } from '../context/theme';
-import themePresets from '../theme'
+import themePresets from '../theme';
+import { experiences } from '../data/constant.js';
+import ExperienceCard from './experienceCard.jsx';
 
 const Experience = () => {
   const context = React.useContext(ThemeContext);
   if (!context) {
-    throw new Error('Exprerience must be used within a ThemeProvider')
+    throw new Error('Experience must be used within a ThemeProvider');
   }
   const { theme } = context;
   return (
-    <div>
-      <div className={cn('flex flex-col mt-5 text-center font-bold text-[26px] md:text-[30px]', themePresets[theme].textColor)}>
+    <div className={cn('w-full mt-5 flex items-center justify-center')}>
+      <div
+        className={cn(
+          'w-full flex flex-col items-center text-center font-bold text-[26px] md:text-[30px]',
+          themePresets[theme].textColor
+        )}
+      >
         <p>Experience</p>
-        <p className={cn('text-[18px] text-center sm:text-[16px]')}>My work experience as a software engineer and working on different companies and projects.</p>
-        {/* <div className={cn('w-full flex flex-wrap justify-center gap-8 mt-8 p-4', themePresets[theme].containerBg)}>
-          {skills.map((skill, index) => (
-            <Card
-              bg={getColorCode(themePresets[theme].bg)}
-              textColor={getColorCode(themePresets[theme].textColor)}
-              borderColor={getColorCode(themePresets[theme].borderColor)}
-              shadowColor={getColorCode(themePresets[theme].shadowColor)}
-              className="nova-square w-full max-w-[500px] px-9 py-4 sm:max-w-[400px] sm:py-2 xs:max-w-[330px]" key={index}>
-              <h2 className={cn('text-[28px] font-semibold text-secondary mb-5 text-center', themePresets[theme].textColor)}>{skill.title}</h2>
-              <div className='flex justify-center flex-wrap gap-3'>
-                {skill.skills.map((item, index) => (
-                  <div className={cn('nes-container is-rounded', theme === 'dark' ? 'is-dark' : '')} style={{ padding: theme === 'light' ? '2px' : '10px', margin: theme === 'dark' ? '1px' : '9px' }} key={index}>
-                    <p>{item.name}</p>
-                  </div>
-                ))}
-              </div>
-            </Card>
-          ))}
+        <p className="text-[18px] text-center sm:text-[16px] font-normal mt-2">
+          My work experience as a software engineer and working on different companies and projects.
+        </p>
 
-        </div> */}
+        <div className={cn('w-full flex flex-col items-center mt-4 py-4 px-4', themePresets[theme].containerBg)}>
+          {experiences.map((experience, index) => (
+            <div key={experience.id} className="flex flex-col items-center justify-center">
+              <ExperienceCard experience={experience} />
+              {index !== experiences.length - 1 && (
+                <>
+                  <div
+                    className={cn(
+                      'w-[3px] rounded-full h-[20px]',
+                      theme === 'light' ? themePresets.dark.bg : themePresets.light.bg
+                    )}
+                  />
+                  <div
+                    className={cn(
+                      'w-4 h-4 rounded-full border-2 ',
+                      theme === 'light' ? themePresets.light.borderColor : themePresets.dark.borderColor
+                    )}
+                  />
+                  <div
+                    className={cn(
+                      'w-[3px] rounded-full h-[20px]',
+                      theme === 'light' ? themePresets.dark.bg : themePresets.light.bg
+                    )}
+                  />
+                </>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Experience
+export default Experience;
