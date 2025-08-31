@@ -1,0 +1,71 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Retro CRT scanlines pattern -->
+    <pattern id="scanlines" patternUnits="userSpaceOnUse" width="32" height="2">
+      <rect width="32" height="1" fill="#00ff41" opacity="0.1"/>
+      <rect y="1" width="32" height="1" fill="transparent"/>
+    </pattern>
+    
+    <!-- Glowing effect filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Dark retro background -->
+  <rect width="32" height="32" fill="#0a0a0a"/>
+  
+  <!-- Terminal window frame -->
+  <rect x="2" y="2" width="28" height="28" fill="#1a1a1a" stroke="#00ff41" stroke-width="1"/>
+  
+  <!-- Terminal header with classic dots -->
+  <rect x="2" y="2" width="28" height="6" fill="#00ff41"/>
+  <circle cx="5" cy="5" r="1" fill="#0a0a0a"/>
+  <circle cx="8" cy="5" r="1" fill="#0a0a0a"/>
+  <circle cx="11" cy="5" r="1" fill="#0a0a0a"/>
+  
+  <!-- Pixelated "MB" text in retro style -->
+  <!-- Letter M -->
+  <rect x="6" y="12" width="2" height="2" fill="#00ff41"/>
+  <rect x="6" y="14" width="2" height="2" fill="#00ff41"/>
+  <rect x="6" y="16" width="2" height="2" fill="#00ff41"/>
+  <rect x="6" y="18" width="2" height="2" fill="#00ff41"/>
+  <rect x="8" y="12" width="2" height="2" fill="#00ff41"/>
+  <rect x="10" y="14" width="2" height="2" fill="#00ff41"/>
+  <rect x="12" y="12" width="2" height="2" fill="#00ff41"/>
+  <rect x="12" y="14" width="2" height="2" fill="#00ff41"/>
+  <rect x="12" y="16" width="2" height="2" fill="#00ff41"/>
+  <rect x="12" y="18" width="2" height="2" fill="#00ff41"/>
+  
+  <!-- Letter B -->
+  <rect x="16" y="12" width="2" height="2" fill="#00ff41"/>
+  <rect x="16" y="14" width="2" height="2" fill="#00ff41"/>
+  <rect x="16" y="16" width="2" height="2" fill="#00ff41"/>
+  <rect x="16" y="18" width="2" height="2" fill="#00ff41"/>
+  <rect x="18" y="12" width="2" height="2" fill="#00ff41"/>
+  <rect x="18" y="15" width="2" height="2" fill="#00ff41"/>
+  <rect x="18" y="18" width="2" height="2" fill="#00ff41"/>
+  <rect x="20" y="13" width="2" height="2" fill="#00ff41"/>
+  <rect x="20" y="17" width="2" height="2" fill="#00ff41"/>
+  
+  <!-- Terminal cursor blink -->
+  <rect x="24" y="18" width="2" height="2" fill="#00ff41" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="1s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Retro grid pattern overlay -->
+  <rect x="2" y="8" width="28" height="22" fill="url(#scanlines)" opacity="0.3"/>
+  
+  <!-- Subtle glow effect -->
+  <rect x="2" y="2" width="28" height="28" fill="none" stroke="#00ff41" stroke-width="0.5" filter="url(#glow)" opacity="0.6"/>
+  
+  <!-- Corner pixels for extra retro feel -->
+  <rect x="0" y="0" width="2" height="2" fill="#00ff41" opacity="0.5"/>
+  <rect x="30" y="0" width="2" height="2" fill="#00ff41" opacity="0.5"/>
+  <rect x="0" y="30" width="2" height="2" fill="#00ff41" opacity="0.5"/>
+  <rect x="30" y="30" width="2" height="2" fill="#00ff41" opacity="0.5"/>
+</svg>

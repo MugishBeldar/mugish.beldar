@@ -1,0 +1,757 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&family=Exo+2:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+@import "../node_modules/nes.css/css/nes.css";
+@import '@hackernoon/pixel-icon-library/fonts/iconfont.css';
+
+/* Enhanced Retro Portfolio Styles */
+:root {
+  /* Retro Theme Variables */
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #2a2a2a;
+  --text-primary: #00ff41;
+  --text-secondary: #00ffff;
+  --text-accent: #ff0080;
+  --text-muted: #888888;
+  --border-color: #00ff41;
+  --border-accent: #00ffff;
+  --card-bg: rgba(26, 26, 26, 0.8);
+  --terminal-bg: #0a0a0a;
+  --terminal-border: #00ff41;
+  --button-bg: rgba(0, 255, 65, 0.1);
+  --button-hover: rgba(0, 255, 65, 0.2);
+  --shadow-color: rgba(0, 255, 65, 0.3);
+
+  /* Classic Terminal Colors (for backward compatibility) */
+  --retro-green: #00ff41;
+  --retro-dark-green: #008f11;
+  --retro-bg: #0a0a0a;
+  --retro-secondary: #1a1a1a;
+
+  /* Synthwave/Outrun Colors */
+  --neon-pink: #ff0080;
+  --neon-cyan: #00ffff;
+  --neon-purple: #8a2be2;
+  --electric-blue: #0066ff;
+  --laser-red: #ff073a;
+  --synthwave-orange: #ff6600;
+  --retro-yellow: #ffff00;
+
+  /* Enhanced Palette */
+  --retro-accent: var(--neon-pink);
+  --retro-blue: var(--neon-cyan);
+  --retro-purple: var(--neon-purple);
+
+  /* Grid and Wireframe */
+  --grid-color: rgba(0, 255, 255, 0.3);
+  --wireframe-color: rgba(255, 0, 128, 0.5);
+
+  /* Hover Effect Variables */
+  --hover-glow: 0 0 20px;
+  --hover-scale: 1.05;
+  --hover-duration: 0.3s;
+
+  /* Robotic Font Variables */
+  --font-robotic-primary: 'Orbitron', monospace;
+  --font-robotic-secondary: 'Rajdhani', sans-serif;
+  --font-robotic-tech: 'Exo 2', sans-serif;
+  --font-mono: 'Share Tech Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Share Tech Mono', monospace;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* CRT Effect */
+.crt-effect {
+  position: relative;
+  background: var(--retro-bg);
+  min-height: 100vh;
+}
+
+.crt-effect::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+    linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.scanlines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent 50%, rgba(0, 255, 65, 0.03) 50%);
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 999;
+  animation: scanlines 0.1s linear infinite;
+}
+
+@keyframes scanlines {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(4px); }
+}
+
+/* Boot Screen */
+.retro-boot-screen {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Share Tech Mono', monospace;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.boot-container {
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.boot-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.ascii-art {
+  font-size: 0.8rem;
+  line-height: 1.2;
+  color: var(--retro-blue);
+}
+
+.boot-text {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.cursor-blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Main Portfolio Container */
+.retro-portfolio {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.retro-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+/* Retro Button Styles */
+.retro-btn {
+  background: var(--button-bg);
+  border: 2px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0.5rem 1rem;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.retro-btn:hover {
+  background: var(--button-hover);
+  color: var(--bg-primary);
+  box-shadow: 0 0 20px var(--shadow-color);
+  text-shadow: none;
+  border-color: var(--text-primary);
+}
+
+.retro-btn.active {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+/* Terminal Styles */
+.terminal-window {
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  border-radius: 0;
+  margin: 1rem 0;
+  box-shadow: 0 0 20px var(--shadow-color);
+  transition: all 0.3s ease;
+}
+
+.terminal-header {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.terminal-content {
+  padding: 1rem;
+  min-height: 200px;
+}
+
+.terminal-line {
+  margin: 0.5rem 0;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.prompt {
+  color: var(--retro-blue);
+  font-weight: bold;
+}
+
+/* Glitch Effect */
+.glitch {
+  position: relative;
+  color: var(--retro-green);
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch::before {
+  animation: glitch-1 0.5s infinite;
+  color: var(--retro-accent);
+  z-index: -1;
+}
+
+.glitch::after {
+  animation: glitch-2 0.5s infinite;
+  color: var(--retro-blue);
+  z-index: -2;
+}
+
+@keyframes glitch-1 {
+  0%, 14%, 15%, 49%, 50%, 99%, 100% {
+    transform: translate(0);
+  }
+  15%, 49% {
+    transform: translate(-2px, 2px);
+  }
+}
+
+@keyframes glitch-2 {
+  0%, 20%, 21%, 62%, 63%, 99%, 100% {
+    transform: translate(0);
+  }
+  21%, 62% {
+    transform: translate(2px, -2px);
+  }
+}
+
+/* Pixel Art Styles */
+.pixel-border {
+  border: 4px solid var(--retro-green);
+  border-image: url("data:image/svg+xml,%3csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m0 0h100v100h-100z' fill='none' stroke='%2300ff41' stroke-width='4'/%3e%3c/svg%3e") 4;
+  image-rendering: pixelated;
+}
+
+/* Progress Bar */
+.retro-progress {
+  background: var(--retro-secondary);
+  border: 2px solid var(--retro-green);
+  height: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.retro-progress-fill {
+  background: linear-gradient(90deg, var(--retro-green), var(--retro-blue));
+  height: 100%;
+  transition: width 2s ease-in-out;
+  position: relative;
+}
+
+.retro-progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 255, 255, 0.1) 2px,
+    rgba(255, 255, 255, 0.1) 4px
+  );
+}
+
+/* Card Styles */
+.retro-card {
+  background: var(--card-bg);
+  border: 2px solid var(--border-color);
+  padding: 1rem;
+  margin: 1rem 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.retro-card:hover {
+  box-shadow:
+    0 0 30px rgba(0, 255, 65, 0.5),
+    0 0 60px rgba(0, 255, 65, 0.3),
+    inset 0 0 20px rgba(0, 255, 65, 0.1);
+  transform: translateY(-5px) scale(1.02);
+  border-color: var(--neon-cyan);
+}
+
+.retro-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, var(--retro-green), var(--retro-blue), var(--retro-accent));
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.retro-card:hover::before {
+  opacity: 0.3;
+}
+
+/* Enhanced Social Links Hover */
+.social-links a:hover {
+  background: var(--retro-green) !important;
+  color: var(--retro-bg) !important;
+  box-shadow:
+    0 0 20px var(--retro-green),
+    0 0 40px rgba(0, 255, 65, 0.4);
+  transform: translateY(-3px) scale(1.1);
+  text-shadow: 0 0 5px var(--retro-bg);
+}
+
+/* Terminal Window Hover */
+.terminal-window:hover {
+  box-shadow:
+    0 0 30px rgba(0, 255, 65, 0.3),
+    inset 0 0 20px rgba(0, 255, 65, 0.05);
+  transform: translateY(-2px);
+}
+
+/* ASCII Art Hover Effect */
+.ascii-name:hover pre {
+  text-shadow:
+    0 0 10px var(--neon-pink),
+    0 0 20px var(--neon-pink),
+    0 0 30px var(--neon-pink);
+  color: var(--neon-pink);
+  transform: scale(1.02);
+}
+
+.ascii-name pre {
+  transition: all var(--hover-duration) ease;
+}
+
+/* Footer */
+.retro-footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-top: 2px solid var(--retro-green);
+  background: var(--retro-secondary);
+}
+
+/* Enhanced Retro Effects */
+
+/* Synthwave Grid Background */
+.synthwave-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: 1;
+  animation: grid-move 20s linear infinite;
+}
+
+@keyframes grid-move {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
+/* Neon Text Effect */
+.neon-text {
+  color: var(--neon-cyan);
+  text-shadow:
+    0 0 5px var(--neon-cyan),
+    0 0 10px var(--neon-cyan),
+    0 0 15px var(--neon-cyan),
+    0 0 20px var(--neon-cyan);
+  animation: neon-flicker 2s infinite alternate;
+}
+
+@keyframes neon-flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow:
+      0 0 5px var(--neon-cyan),
+      0 0 10px var(--neon-cyan),
+      0 0 15px var(--neon-cyan),
+      0 0 20px var(--neon-cyan);
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+/* Holographic Effect */
+.holographic {
+  background: linear-gradient(
+    45deg,
+    var(--neon-pink),
+    var(--neon-cyan),
+    var(--neon-purple),
+    var(--electric-blue)
+  );
+  background-size: 400% 400%;
+  animation: holographic-shift 3s ease-in-out infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes holographic-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Retro Loading Bar */
+.retro-loading {
+  background: var(--retro-secondary);
+  border: 2px solid var(--neon-cyan);
+  height: 30px;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    inset 0 0 10px rgba(0, 255, 255, 0.5),
+    0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.retro-loading::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 255, 255, 0.8),
+    transparent
+  );
+  animation: loading-sweep 2s infinite;
+}
+
+@keyframes loading-sweep {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* VHS Static Effect */
+.vhs-static {
+  position: relative;
+}
+
+.vhs-static::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+  pointer-events: none;
+  animation: vhs-noise 0.2s infinite;
+}
+
+@keyframes vhs-noise {
+  0% { transform: translate(0); }
+  10% { transform: translate(-1px, 1px); }
+  20% { transform: translate(1px, -1px); }
+  30% { transform: translate(-1px, -1px); }
+  40% { transform: translate(1px, 1px); }
+  50% { transform: translate(-1px, 1px); }
+  60% { transform: translate(1px, -1px); }
+  70% { transform: translate(-1px, -1px); }
+  80% { transform: translate(1px, 1px); }
+  90% { transform: translate(-1px, 1px); }
+  100% { transform: translate(0); }
+}
+
+/* Retro Button Enhancements */
+.retro-btn-enhanced {
+  background: transparent;
+  border: 2px solid var(--neon-cyan);
+  color: var(--neon-cyan);
+  padding: 0.8rem 1.5rem;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.retro-btn-enhanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.retro-btn-enhanced:hover::before {
+  left: 100%;
+}
+
+.retro-btn-enhanced:hover {
+  background: rgba(0, 255, 255, 0.1);
+  box-shadow:
+    0 0 20px var(--neon-cyan),
+    inset 0 0 20px rgba(0, 255, 255, 0.1),
+    0 0 40px rgba(0, 255, 255, 0.3);
+  text-shadow: 0 0 10px var(--neon-cyan);
+  transform: translateY(-2px) scale(1.02);
+  border-color: var(--neon-pink);
+  color: var(--neon-pink);
+}
+
+/* Enhanced Navigation Button Hover */
+.retro-nav-btn:hover {
+  background: var(--retro-green) !important;
+  color: var(--retro-bg) !important;
+  box-shadow:
+    0 0 20px var(--retro-green),
+    0 0 40px rgba(0, 255, 65, 0.5),
+    inset 0 0 10px rgba(0, 255, 65, 0.2);
+  transform: translateY(-3px) scale(1.05);
+  text-shadow: 0 0 5px var(--retro-bg);
+  border-color: var(--neon-cyan);
+}
+
+.retro-nav-btn {
+  transition: all var(--hover-duration) ease !important;
+}
+
+/* Global Hover Enhancements */
+.terminal-line:hover {
+  color: var(--neon-cyan);
+  text-shadow: 0 0 5px var(--neon-cyan);
+  transition: all 0.2s ease;
+}
+
+.prompt:hover {
+  color: var(--neon-pink) !important;
+  text-shadow: 0 0 8px var(--neon-pink);
+}
+
+/* Progress Bar Hover */
+.retro-progress:hover {
+  box-shadow:
+    0 0 15px var(--retro-green),
+    inset 0 0 10px rgba(0, 255, 65, 0.2);
+  transform: scale(1.02);
+}
+
+/* Glitch Effect Enhancement on Hover */
+.glitch:hover {
+  animation: enhanced-glitch 0.3s ease-in-out;
+}
+
+@keyframes enhanced-glitch {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+}
+
+/* Matrix Rain Hover Effect */
+.matrix-rain:hover span {
+  animation: matrix-pulse 0.5s ease-in-out;
+}
+
+@keyframes matrix-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* Holographic Text Hover */
+.holographic:hover {
+  background: linear-gradient(45deg, var(--neon-pink), var(--neon-cyan), var(--neon-purple));
+  background-size: 400% 400%;
+  animation: holographic-shift 2s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes holographic-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .retro-container {
+    padding: 0.5rem;
+  }
+
+  .boot-container {
+    padding: 1rem;
+  }
+
+  .ascii-art {
+    font-size: 0.6rem;
+  }
+
+  .glitch {
+    font-size: 1.5rem;
+  }
+
+  .synthwave-grid {
+    background-size: 30px 30px;
+  }
+}
+
+/* Robotic Font Applications */
+.robotic-title {
+  font-family: var(--font-robotic-primary) !important;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.robotic-subtitle {
+  font-family: var(--font-robotic-secondary) !important;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+.robotic-tech {
+  font-family: var(--font-robotic-tech) !important;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+/* Apply robotic fonts to specific elements */
+.retro-status-bar {
+  font-family: var(--font-robotic-tech) !important;
+}
+
+.terminal-header {
+  font-family: var(--font-robotic-secondary) !important;
+}
+
+.retro-btn-enhanced {
+  font-family: var(--font-robotic-secondary) !important;
+  font-weight: 600;
+}
+
+.retro-nav-btn {
+  font-family: var(--font-robotic-secondary) !important;
+  font-weight: 600;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-robotic-primary) !important;
+}
+
+.glitch {
+  font-family: var(--font-robotic-primary) !important;
+}
+
+/* Name display with robotic font */
+.name-display h1 {
+  font-family: var(--font-robotic-primary) !important;
+  font-weight: 900;
+  letter-spacing: 0.3em;
+}
+
+
+
+/* Theme transition for all elements */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
