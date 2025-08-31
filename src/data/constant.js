@@ -1,52 +1,5 @@
-// import emailClientProjectImage from '../assets/email_client_project.png';
-// import breezeWeatherApplicatioProjectImage from '../assets/breeze_weather_project_image.png'
-// import nodeJsImage from '../assets/nodejsLight.svg';
-// import reactJsImage from '../assets/reactjs.svg';
-// import expressJsImage from '../assets/expressJs.png';
-// import mysqlImage from '../assets/mysql-original-wordmark.svg';
-// import mongodbImage from '../assets/mongodb-original-wordmark.svg'
-// import prismaImage from '../assets/prisma.png';
-// import cockroachdbImage from '../assets/cockroachdb.png';
-// import htmlImage from '../assets/html5-badge-h-solo.png';
-// import cssImage from '../assets/CSS3_logo_and_wordmark.svg.png';
-// import jsImage from '../assets/JavaScript-logo.png';
-// import bootsTrapImage from '../assets/bootstrap-logo-shadow.png';
-// import tailwindCssImage from '../assets/tailwindcss.png';
-// import kafkaImage from '../assets/kafka.png';
-// import githubImage from '../assets/github.png';
-// import gitImage from '../assets/gitimage.png';
-// import vsCodeImage from '../assets/Visual_Studio_Code_1.35_icon.svg.png';
-// import postManImage from '../assets/postman.png';
-// import zentalkPcLoginImage from '../assets/zentalk-pc-login.png';
-// import zentalkPcSignupImage from '../assets/zentalk-pc-signup-page.png';
-// import zentalkPcChatListAndChatAreaImage from '../assets/zentalk-pc-initial-starting-page.png';
-// import zentalkPcSearchImage from '../assets/zentalk-pc-search-drop-down-page.png';
-// import zentalkPcSettingImage from '../assets/zentalk-pc-setting-page.png';
-// import zentalkMobileLoginImage from '../assets/zentalk-mobile-login.png';
-// import zentalkMobileSignUpImage from '../assets/zentalk-mobile-signup.png';
-// import zentalkMobileChatListImage from '../assets/zentalk-mobile-chat-screen.png';
-// import zentalkMobileChatAreaImage from '../assets/zentalk-mobile-chat-area-screen.png';
-// import zentalkMobileContextMenuImage from '../assets/zentalk-mobile-context-menu.png';
-// import zentalkMobileSettingImage from '../assets/zentalk-mobile-setting.png';
 import rapidopsColorImg from '/assets/rapidops-color.png';
-import maxgenColorImg  from '/assets/maxgen-color.png';
-
-export const pcZentalkImages = [
-  // zentalkPcLoginImage,
-  // zentalkPcSignupImage,
-  // zentalkPcChatListAndChatAreaImage,
-  // zentalkPcSearchImage,
-  // zentalkPcSettingImage,
-];
-
-export const mobileZentalkImages = [
-  // zentalkMobileLoginImage,
-  // zentalkMobileSignUpImage,
-  // zentalkMobileChatListImage,
-  // zentalkMobileChatAreaImage,
-  // zentalkMobileContextMenuImage,
-  // zentalkMobileSettingImage,
-]
+import maxgenColorImg from '/assets/maxgen-color.png';
 
 export const Bio = {
   name: "Mugish Beldar",
@@ -68,37 +21,22 @@ export const Bio = {
 
 export const skills = [
   {
-    title: "Backend",
+    title: "Languages",
     skills: [
       {
-        name: "Node Js",
-        // image: nodeJsImage,
-        link: 'https://nodejs.dev/en/learn/'
+        name: "Rust",
+        link: 'https://doc.rust-lang.org/',
+        description: 'Systems programming language focused on safety, speed, and concurrency without garbage collection.'
       },
       {
-        name: "Express Js",
-        // image: expressJsImage,
-        link: 'https://expressjs.com/'
+        name: "JavaScript",
+        link: 'https://javascript.info/',
+        description: 'Dynamic programming language for web development, enabling interactive websites and applications.'
       },
       {
-        name: "MySQL",
-        // image: mysqlImage,
-        link: 'https://www.javatpoint.com/mysql-tutorial',
-      },
-      {
-        name: "MongoDB",
-        // image: mongodbImage,
-        link: 'https://www.w3schools.com/mongodb/'
-      },
-      {
-        name: "Prisma",
-        // image: prismaImage,
-        link: 'https://www.prisma.io/docs'
-      },
-      {
-        name: "CockroachDB",
-        // image: cockroachdbImage,
-        link: 'https://www.cockroachlabs.com/docs/stable/learn-cockroachdb-sql',
+        name: "TypeScript",
+        link: "https://www.typescriptlang.org/docs/",
+        description: 'Strongly typed superset of JavaScript that compiles to plain JavaScript, enhancing code quality.'
       },
     ],
   },
@@ -107,65 +45,143 @@ export const skills = [
     skills: [
       {
         name: "React Js",
-        // image: reactJsImage,
-        link: 'https://react.dev/learn'
+        link: 'https://react.dev/learn',
+        description: 'Popular JavaScript library for building user interfaces with component-based architecture.'
       },
-
+      {
+        name: "Next Js",
+        link: 'https://nextjs.org/docs',
+        description: 'React framework for production with features like SSR, SSG, and automatic code splitting.'
+      },
       {
         name: "HTML",
-        // image: htmlImage,
-        link: 'https://www.w3schools.com/html/'
+        link: 'https://www.w3schools.com/html/',
+        description: 'Standard markup language for creating web pages and web applications.'
       },
       {
         name: "CSS",
-        // image: cssImage,
-        link: 'https://www.w3schools.com/css/'
-      },
-      {
-        name: "JavaScript",
-        // image: jsImage,
-        link: 'https://javascript.info/'
+        link: 'https://www.w3schools.com/css/',
+        description: 'Style sheet language used for describing the presentation of HTML documents.'
       },
       {
         name: "TailwindCss",
-        // image: tailwindCssImage,
-        link: "https://tailwindcss.com/docs/installation"
+        link: "https://tailwindcss.com/docs/installation",
+        description: 'Utility-first CSS framework for rapidly building custom user interfaces.'
       },
       {
         name: "Bootstrap",
-        // image: bootsTrapImage,
-        link: "https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+        link: "https://getbootstrap.com/docs/5.3/getting-started/introduction/",
+        description: 'Popular CSS framework for developing responsive and mobile-first websites.'
       }
     ],
   },
   {
-    title: "Others",
+    title: "Backend",
+    skills: [
+      {
+        name: "Node Js",
+        link: 'https://nodejs.dev/en/learn/',
+        description: 'JavaScript runtime built on Chrome\'s V8 engine for building scalable server-side applications.'
+      },
+      {
+        name: "Express Js",
+        link: 'https://expressjs.com/',
+        description: 'Fast, unopinionated web framework for Node.js applications and APIs.'
+      },
+      {
+        name: "Actix Web",
+        link: 'https://actix.rs/docs/',
+        description: 'Powerful, pragmatic, and extremely fast web framework for Rust.'
+      },
+      {
+        name: "Prisma",
+        link: 'https://www.prisma.io/docs',
+        description: 'Next-generation ORM for Node.js and TypeScript with type safety and auto-completion.'
+      }
+    ],
+  },
+  {
+    title: "Databases",
+    skills: [
+      {
+        name: "CockroachDB",
+        link: 'https://www.cockroachlabs.com/docs/stable/learn-cockroachdb-sql',
+        description: 'Distributed SQL database built for cloud applications with strong consistency.'
+      },
+      {
+        name: "Clickhouse",
+        link: 'https://clickhouse.com/docs',
+        description: 'Open-source column-oriented database for online analytical processing (OLAP).'
+      },
+      {
+        name: "ScayllaDB",
+        link: 'https://docs.scylladb.com/',
+        description: 'High-performance NoSQL database compatible with Apache Cassandra.'
+      },
+      {
+        name: "MySQL",
+        link: 'https://www.javatpoint.com/mysql-tutorial',
+        description: 'Popular open-source relational database management system.'
+      },
+      {
+        name: "MongoDB",
+        link: 'https://www.w3schools.com/mongodb/',
+        description: 'Document-oriented NoSQL database for modern applications.'
+      },
+    ],
+  },
+  {
+    title: "Messaging",
     skills: [
       {
         name: "Kafka",
-        // image: kafkaImage,
-        link: 'https://kafka.js.org/docs/getting-started'
+        link: 'https://kafka.js.org/docs/getting-started',
+        description: 'Distributed streaming platform for building real-time data pipelines and applications.'
       },
       {
+        name: "Nats",
+        link: 'https://docs.nats.io/',
+        description: 'Simple, secure, and high-performance messaging system for cloud native applications.'
+      }
+    ],
+  },
+  {
+    title: "DevOps",
+    skills: [
+      {
+        name: "Docker",
+        link: 'https://docs.docker.com/',
+        description: 'Platform for developing, shipping, and running applications using containerization.'
+      },
+      {
+        name: "Kubernetes",
+        link: 'https://kubernetes.io/docs/',
+        description: 'Open-source container orchestration platform for automating deployment and scaling.'
+      }
+    ],
+  },
+  {
+    title: "Tools",
+    skills: [
+      {
         name: "Git",
-        // image: gitImage,
-        link: 'https://www.w3schools.com/git/'
+        link: 'https://www.w3schools.com/git/',
+        description: 'Distributed version control system for tracking changes in source code.'
       },
       {
         name: "GitHub",
-        // image: githubImage,
-        link: 'https://docs.github.com/en/get-started/quickstart/hello-world'
+        link: 'https://docs.github.com/en/get-started/quickstart/hello-world',
+        description: 'Web-based platform for version control and collaboration using Git.'
       },
-
       {
         name: "VS Code",
-        // image: vsCodeImage,
-        link: 'https://code.visualstudio.com/'
+        link: 'https://code.visualstudio.com/',
+        description: 'Lightweight but powerful source code editor with extensive extension support.'
       },
       {
         name: "Postman",
-        // image: postManImage,
-        link: 'https://www.postman.com/downloads/'
+        link: 'https://www.postman.com/downloads/',
+        description: 'API development environment for testing, documenting, and sharing APIs.'
       }
     ],
   },
@@ -174,6 +190,7 @@ export const experiences = [
   {
     id: 0,
     img: rapidopsColorImg,
+    url: 'https://www.rapidops.com/',
     role: "Backed Developer",
     company: "Rapidops Inc.",
     date: "Feb 2023 - Present",
@@ -191,6 +208,7 @@ export const experiences = [
   {
     id: 1,
     img: maxgenColorImg,
+    url: 'https://maxgentechnologies.com/',
     role: "Frontend Developer Intern",
     company: "Maxgen Technologies Pvt. Ltd.",
     date: "Jun 2022 - Aug 2022",
@@ -260,10 +278,10 @@ export const projects = [
       "ZenTalk is a real-time chat application built using a modern technology stack. The backend leverages Node.js and Express.js for robust API handling, while MongoDB serves as the database for storing chat messages and user data. To enable real-time communication, Socket.io is employed, facilitating instant messaging between users. On the frontend, React.js is used to create an intuitive and responsive user interface, ensuring an engaging chat experience. The combination of these technologies allows ZenTalk to deliver seamless, real-time communication in a user-friendly environment, making it a compelling choice for interactive conversations and collaborative discussions.",
     image: [{
       imagesFor: 'pc',
-      images: pcZentalkImages
+      // images: pcZentalkImages
     }, {
       imagesFor: 'mobile',
-      images: mobileZentalkImages
+      // images: mobileZentalkImages
     }],
     tags: [
       "Node Js",
@@ -301,11 +319,3 @@ export const projects = [
     liveLink: 'https://breeze-lake.vercel.app/weather'
   },
 ];
-
-// export const TimeLineData = [
-//   {year: 2017, text: "Started my journey"},
-//   {year: 2018, text: "Worked as a freelance developer"},
-//   {year: 2019, text: "Founded JavaScript Mastery"},
-//   {year: 2020, text: "Shared my projects with the world"},
-//   {year: 2021, text: "Started my own platform"},
-// ];
