@@ -107,7 +107,7 @@ const RetroHero = () => {
                 style={{
                   color: 'var(--neon-cyan)',
                   fontSize: '0.8rem',
-                  animation: `fadeIn 0.5s ease-in ${index * 0.3}s both`
+                  // animation: `fadeIn 0.5s ease-in ${index * 0.3}s both`
                 }}
               >
                 {info}
@@ -115,7 +115,7 @@ const RetroHero = () => {
             ))}
           </div>
 
-          <div className="name-display" style={{ textAlign: 'center', margin: '2rem 0' }}>
+          {/* <div className="name-display" style={{ textAlign: 'center', margin: '2rem 0' }}>
             <h1 className="holographic robotic-title" style={{
               fontSize: '3rem',
               fontWeight: '900',
@@ -126,7 +126,7 @@ const RetroHero = () => {
             }}>
               {nameDisplay}
             </h1>
-          </div>
+          </div> */}
           
           <div className="hero-info">
             <div className="terminal-line">

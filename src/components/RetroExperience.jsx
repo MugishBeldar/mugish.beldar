@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import { experiences } from '../data/constant';
 
@@ -63,7 +64,7 @@ LOG END - NEXT ENTRY LOADING...
         </div>
         
         <div className="terminal-content">
-          <div className="terminal-line">
+          {/* <div className="terminal-line">
             <span className="prompt">work@portfolio:~$ </span>
             <span>tail -f /var/log/employment.log</span>
           </div>
@@ -81,7 +82,7 @@ LOG END - NEXT ENTRY LOADING...
           }}>
             {displayText}
             {isTyping && <span className="cursor-blink">█</span>}
-          </div>
+          </div> */}
 
           {/* Experience Timeline */}
           <div className="experience-timeline" style={{ marginTop: '2rem' }}>

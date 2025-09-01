@@ -77,9 +77,9 @@ const RetroSkills = () => {
               
               <div className="skills-grid" style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(3, 1fr)',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
                 gap: '1rem',
-                marginLeft: '2rem'
+                marginLeft: '0.5rem'
               }}>
                 {category.skills.map((skill, skillIndex) => {
                   const skillKey = `${categoryIndex}-${skillIndex}`;
@@ -95,8 +95,9 @@ const RetroSkills = () => {
                         cursor: 'pointer',
                         transition: 'all 0.3s ease',
                         transform: isExpanded ? 'scale(1.02)' : 'scale(1)',
-                        gridColumn: isExpanded ? 'span 3' : 'span 1',
-                        border: isExpanded ? '2px solid var(--neon-cyan)' : '1px solid var(--retro-green)'
+                        gridColumn: isExpanded ? '1 / -1' : 'span 1',
+                        border: isExpanded ? '2px solid var(--neon-cyan)' : '1px solid var(--retro-green)',
+                        minWidth: '0'
                       }}
                       onClick={() => handleSkillClick(skillKey)}
                     >
@@ -105,7 +106,8 @@ const RetroSkills = () => {
                         alignItems: 'center',
                         gap: '0.5rem',
                         justifyContent: isExpanded ? 'flex-start' : 'center',
-                        marginBottom: isExpanded ? '0.5rem' : '0'
+                        marginBottom: isExpanded ? '0.5rem' : '0',
+                        flexWrap: 'wrap'
                       }}>
                         <SkillIcon skillName={skill.name} />
                         <span style={{

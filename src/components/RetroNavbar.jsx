@@ -31,11 +31,11 @@ const RetroNavbar = ({ currentSection, setCurrentSection }) => {
   return (
     <nav className="retro-navbar">
       {/* Single Line Status Bar - Like in your image */}
-      <div className="retro-status-bar robotic-tech" style={{
+      {/* Full status bar for desktop */}
+      <div className="retro-status-bar robotic-tech hidden md:flex" style={{
         background: 'var(--retro-green)',
         color: 'var(--retro-bg)',
         padding: '0.5rem 1rem',
-        display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
         fontSize: '0.9rem',
@@ -56,6 +56,19 @@ const RetroNavbar = ({ currentSection, setCurrentSection }) => {
         <div>
           USER: GUEST | SESSION: ACTIVE
         </div>
+      </div>
+
+      {/* Mobile status bar - only shows user info */}
+      <div className="retro-status-bar-mobile robotic-tech flex md:hidden" style={{
+        background: 'var(--retro-green)',
+        color: 'var(--retro-bg)',
+        padding: '0.5rem 1rem',
+        justifyContent: 'center',
+        alignItems: 'center',
+        fontSize: '0.8rem',
+        fontWeight: 'bold'
+      }}>
+        USER: GUEST | SESSION: ACTIVE
       </div>
 
       {/* Main Navigation - Keep original design */}

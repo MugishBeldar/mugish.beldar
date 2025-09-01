@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import { Bio } from '../data/constant';
 
@@ -180,7 +181,7 @@ const RetroContact = () => {
               </div>
 
               {/* Contact Form */}
-              <div className="contact-form">
+              {/* <div className="contact-form">
                 <div className="terminal-line" style={{ color: 'var(--retro-blue)', marginBottom: '1rem' }}>
                   <span className="prompt">comm@portfolio:~$ </span>
                   <span>nano /tmp/message.txt</span>
@@ -318,7 +319,7 @@ const RetroContact = () => {
                     </div>
                   </div>
                 )}
-              </div>
+              </div> */}
             </>
           )}
 
