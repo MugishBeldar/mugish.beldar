@@ -7,7 +7,7 @@ const Experience = () => {
       position: "Software Engineer",
       company: "Rapidops Inc.",
       location: "Ahmedabad, India",
-      duration: "Augest 2023 - Present",
+      duration: "August 2023 - Present",
       type: "Full-time",
       description: "Software Engineer with 2+ years of experience in designing and developing scalable web applications using modern technologies. Skilled in system architecture design, performance optimization, and debugging complex issues. Actively involved in code reviews and implementing best practices to maintain high-quality, maintainable code. Collaborated with cross-functional teams including product managers, designers, and QA engineers to deliver reliable, user-focused software solutions within deadlines. Experienced in full-stack development, API integrations, and deploying applications in cloud environments.",
       achievements: [
