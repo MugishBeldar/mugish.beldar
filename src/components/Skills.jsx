@@ -2,6 +2,11 @@ import { useState, useEffect } from 'react'
 import { Palette, Settings, Database, Cloud, Zap, Code, Wrench } from 'lucide-react'
 import './Skills.css'
 
+// Import images
+import typescriptIcon from '../assets/typescript.png'
+import sqlServerIcon from '../assets/sql-server.png'
+import vsCodeIcon from '../assets/vscode.png'
+
 const Skills = () => {
   const [imageErrors, setImageErrors] = useState({})
 
@@ -28,7 +33,7 @@ const Skills = () => {
       skills: [
         { name: "Rust", icon: "https://avatars.githubusercontent.com/u/5430905?s=48&v=4" },
         { name: "JavaScript", icon: "https://avatars.githubusercontent.com/u/9919?s=48&v=4" },
-        { name: "TypeScript", icon: "/src/assets/typescript.png" }
+        { name: "TypeScript", icon: typescriptIcon }
       ]
     },
     Frontend: {
@@ -52,7 +57,7 @@ const Skills = () => {
       icon: <Database className="category-icon" />,
       skills: [
         { name: "MySQL", icon: "https://avatars.githubusercontent.com/u/2452804?s=48&v=4" },
-        { name: "MSSQL", icon: "/src/assets/sql-server.png" },
+        { name: "MSSQL", icon: sqlServerIcon },
         { name: "ClickHouse", icon: "https://avatars.githubusercontent.com/u/54801242?s=48&v=4" },
         { name: "ScyllaDB", icon: "https://avatars.githubusercontent.com/u/14364730?s=48&v=4" },
         { name: "CockroachDB", icon: "https://avatars.githubusercontent.com/u/6748139?s=48&v=4" },
@@ -78,7 +83,7 @@ const Skills = () => {
       icon: <Wrench className="category-icon" />,
       skills: [
         { name: "Lens", icon: "https://avatars.githubusercontent.com/u/62133242?s=48&v=4" },
-        { name: "VS Code", icon: "", },
+        { name: "VS Code", icon: vsCodeIcon, },
         { name: "JetBrains", icon: "https://avatars.githubusercontent.com/u/878437?s=48&v=4" },
         { name: "Postman", icon: "https://avatars.githubusercontent.com/u/10251060?s=48&v=4" },
         { name: "Git", icon: "https://avatars.githubusercontent.com/u/18133?s=48&v=4" },

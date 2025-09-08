@@ -2,6 +2,11 @@ import { useState } from 'react'
 import { ExternalLink, Calendar, Users, Star, Zap } from 'lucide-react'
 import './Projects.css'
 
+// Import images
+import ecommerceImage from '../assets/ecommerce-web-application.png'
+import breezeImage from '../assets/breeze-wheather-application.png'
+import portfolioImage from '../assets/portfolio.png'
+
 const Projects = () => {
   const [imageErrors, setImageErrors] = useState({})
 
@@ -47,7 +52,7 @@ const Projects = () => {
     {
       title: "E-Commerce Platform",
       description: "A full-stack e-commerce platform with modern UI/UX, real-time inventory management, and secure payment processing. Built with Next.js, and PostgreSQL.",
-      image: "/src/assets/ecommerce-web-application.png",
+      image: ecommerceImage,
       technologies: ["Next.js", "PostgreSQL", "Stripe", "Redis", "Vercel", "Shadcn UI"],
       features: [
         "Real-time inventory tracking",
@@ -64,7 +69,7 @@ const Projects = () => {
     {
       title: "Breeze Weather Application",
       description: "Breeze, a sleek React-based weather app, leverages the OpenWeatherMap API to provide a responsive and visually appealing interface. Offering a concise five-day forecast with real-time updates, interactive maps, and customizable units, Breeze ensures users stay informed and in control of their weather plans.",
-      image: "/src/assets/breeze-wheather-application.png",
+      image: breezeImage,
       technologies: ["Node Js",
         "Express Js",
         "React Js",
@@ -85,7 +90,7 @@ const Projects = () => {
     {
       title: "Portfolio",
       description: "A modern portfolio website with aesthetic, featuring glassmorphism effects, interactive animations, and responsive design. Built with React and custom CSS to showcase projects and skills in a visually stunning interface.",
-      image: "/src/assets/portfolio.png",
+      image: portfolioImage,
       technologies: ["React", "Vite", "CSS3", "JavaScript", "Lucide Icons", "Glassmorphism"],
       features: [
         "Glassmorphism effects",

@@ -108,7 +108,7 @@ const Home = () => {
               </button>
               <button
                 className="btn-resume"
-                onClick={() => window.open('/resume.pdf', '_blank')}
+                onClick={() => window.open('https://drive.google.com/file/d/1pW06E8uKEPQczzQQsn1PJAEHa0yHGN2T/view?usp=sharing', '_blank')}
               >
                 <FileText size={20} className="resume-icon" />
                 View Resume
