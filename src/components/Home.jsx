@@ -108,7 +108,7 @@ const Home = () => {
               </button>
               <button
                 className="btn-resume"
-                onClick={() => window.open('https://drive.google.com/file/d/1pW06E8uKEPQczzQQsn1PJAEHa0yHGN2T/view?usp=sharing', '_blank')}
+                onClick={() => window.open('https://drive.google.com/file/d/1_UkajePRcII7PXI6yxEn-MyDGl7cySw5/view', '_blank')}
               >
                 <FileText size={20} className="resume-icon" />
                 View Resume
